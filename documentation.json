@@ -116,5 +116,9 @@
         ]
       }
     ]
+  },
+  "seo": {
+    "robots:index": false,
+    "robots:follow": false
   }
 }
