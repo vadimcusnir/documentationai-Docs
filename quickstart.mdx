@@ -1,0 +1,122 @@
+---
+title: Getting Started with CUSNIR OS
+description: Quick guide to accessing and exploring the CUSNIR OS user interface in demo mode without authentication to test basic functionalities.
+---
+
+## Prerequisites
+
+Before exploring CUSNIR OS, ensure you have a modern web browser like Chrome, Firefox, or Safari. No account creation or authentication is required for demo mode.
+
+<Callout kind="info">
+  CUSNIR OS demo mode provides full UI access for testing governance and decision-making features. Some advanced actions require authentication.
+</Callout>
+
+## Access the Demo UI
+
+Follow these steps to launch the CUSNIR OS interface instantly.
+
+<Steps>
+  <Step title="Visit Demo URL" icon="globe">
+    Open your browser and navigate to `https://demo.cusnir-os.com`.
+  </Step>
+  <Step title="Select Demo Mode" icon="play">
+    On the landing page, click the **Start Demo** button. No login prompts appear.
+  </Step>
+  <Step title="Explore Dashboard" icon="dashboard">
+    You land on the main dashboard. Review the governance overview panel.
+  </Step>
+</Steps>
+
+## Navigate the Interface
+
+CUSNIR OS features an intuitive sidebar for core sections.
+
+<Tabs>
+  <Tab title="Governance" icon="shield">
+    Access decision workflows and policy management.
+    
+    ```mermaid
+    graph TD
+        A[Dashboard] --> B[Governance]
+        B --> C[Decisions]
+        B --> D[Policies]
+    ```
+  </Tab>
+  <Tab title="Decisions" icon="zap">
+    View cognitive decision trees and simulations.
+    
+    Key areas include real-time analytics and scenario modeling.
+  </Tab>
+  <Tab title="Settings" icon="settings">
+    Adjust demo preferences like theme or language.
+  </Tab>
+</Tabs>
+
+## Perform Initial Interactions
+
+Test basic functionalities right away.
+
+<Steps>
+  <Step title="Create a Test Decision" icon="plus">
+    Navigate to **Governance > Decisions** and click **New Decision**.
+    
+    Fill in:
+    
+    | Field       | Example Value              |
+    |-------------|----------------------------|
+    | Title       | Test Policy Approval       |
+    | Description | Demo governance workflow   |
+    | Priority    | High                       |
+    
+    Submit to simulate processing.
+  </Step>
+  <Step title="Review Analytics" icon="bar-chart-3">
+    Check the **Analytics** tab for cognitive insights on your decision.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Browser Console">
+  ```javascript
+  // Optional: Inspect elements in browser dev tools
+  console.log('CUSNIR OS Demo Active');
+  const decisions = document.querySelectorAll('.decision-item');
+  console.log(`Found {decisions.length} decisions`);
+  ```
+</CodeGroup>
+
+## Understand Demo Limitations
+
+Demo mode restricts certain actions to prevent overuse.
+
+<Callout kind="alert">
+  Limitations include:
+  
+  - No persistent data storage (resets on refresh)
+  - Export features disabled
+  - Maximum 5 concurrent decisions
+  - No custom integrations
+  
+  Upgrade to full access via `/authentication` for production use.
+</Callout>
+
+## Next Steps
+
+Dive deeper into CUSNIR OS capabilities.
+
+<Columns cols={3}>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Set up secure access for advanced features.
+  </Card>
+  <Card title="Governance Guide" icon="book-open" href="/guide">
+    Learn policy management workflows.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api">
+    Integrate programmatically.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Tips" default-open="false">
+  - Refresh page if UI freezes
+  - Clear browser cache for latest demo
+  - Check console for `{errors}`
+</Expandable>

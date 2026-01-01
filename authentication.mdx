@@ -1,0 +1,135 @@
+---
+title: Authentication in CUSNIR OS
+description: Learn how to authenticate to unlock full features of CUSNIR OS beyond the demo mode, including account setup and permissions.
+---
+
+## Overview
+
+CUSNIR OS provides a demo mode that lets you explore the user interface without authentication. To access full governance and decision-making features, authenticate using email/password or API tokens. Complete registration first, then log in to manage cognitive processes and permissions.
+
+<Callout kind="info">
+
+Demo mode limits you to read-only views. Authenticate to enable editing, role assignments, and API integrations.
+
+</Callout>
+
+## Registration Process
+
+Create your account to start. Follow these steps to register via the dashboard or API.
+
+<Steps>
+  <Step title="Navigate to Registration" icon="user-plus">
+    Visit `https://dashboard.example.com/register` in your browser.
+  </Step>
+  <Step title="Enter Details" icon="edit-3">
+    Provide your email, a strong password, and optional organization name.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification link and click it to activate.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the login page and sign in with your credentials.
+  </Step>
+</Steps>
+
+## Authentication Methods
+
+Choose from UI-based login or API authentication. Use the UI for dashboard access and API for programmatic integration.
+
+<Tabs>
+  <Tab title="Dashboard Login" icon="monitor">
+    Use the web interface at `https://dashboard.example.com/login`.
+
+    ```javascript
+    // Example: Direct browser navigation (no code needed)
+    // Enter email: user@example.com
+    // Password: your-secure-password
+    ```
+  </Tab>
+  <Tab title="API Token" icon="key">
+    Generate tokens after login for secure API calls.
+
+    <ParamField header="Authorization" param-type="string" required="true">
+      Bearer token format: `Bearer YOUR_TOKEN`.
+    </ParamField>
+
+    <ParamField body="email" param-type="string" required="true">
+      Your registered email address.
+    </ParamField>
+
+    <ParamField body="password" param-type="string" required="true">
+      Account password (use securely).
+    </ParamField>
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  const response = await fetch('https://api.example.com/v1/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: 'user@example.com',
+      password: 'your-secure-password'
+    })
+  });
+  const { token } = await response.json();
+  console.log('Token:', token);
+  ```
+  ```python
+  import requests
+  response = requests.post('https://api.example.com/v1/auth/login', json={
+      'email': 'user@example.com',
+      'password': 'your-secure-password'
+  })
+  token = response.json()['token']
+  print('Token:', token)
+  ```
+</CodeGroup>
+
+## User Roles and Permissions
+
+CUSNIR OS assigns roles that control access. View your role in the dashboard under account settings.
+
+<Columns cols={3}>
+  <Card title="Viewer" icon="eye" horizontal>
+    Read-only access to cognitive processes and reports.
+  </Card>
+  <Card title="User" icon="user" horizontal>
+    Edit decisions, view full analytics, assign basic tasks.
+  </Card>
+  <Card title="Admin" icon="shield" horizontal>
+    Manage users, roles, system governance, and API keys.
+  </Card>
+</Columns>
+
+| Role   | View Processes | Edit Decisions | Manage Users |
+|--------|----------------|---------------|--------------|
+| Viewer | ✅             | ❌             | ❌           |
+| User   | ✅             | ✅             | ❌           |
+| Admin  | ✅             | ✅             | ✅           |
+
+## Feature Access Levels
+
+Unauthenticated users (demo mode) see limited UI elements. Authenticated users unlock everything based on role.
+
+<Expandable title="Advanced Permissions Details" default-open="false">
+
+Permissions use role-based access control (RBAC). Admins grant fine-grained permissions via the governance panel.
+
+For example, restrict API endpoints:
+
+```javascript
+// Admin-only endpoint check
+if (user.role === 'admin') {
+  await fetch('https://api.example.com/v1/admin/decisions');
+}
+```
+
+</Expandable>
+
+<Callout kind="alert">
+
+Never expose `YOUR_TOKEN` in client-side code. Rotate tokens regularly and use HTTPS only.
+
+</Callout>

@@ -1,0 +1,126 @@
+---
+title: Changelog
+description: Track the version history of CUSNIR OS, including recent updates, new features, and improvements.
+---
+
+## Latest Updates
+
+<Callout kind="info">
+  CUSNIR OS releases follow semantic versioning. You receive automatic notifications for new versions in the dashboard. Check your current version in the settings panel.
+</Callout>
+
+## How to Update
+
+Follow these steps to update CUSNIR OS to the latest version.
+
+<Steps>
+  <Step title="Check Current Version" icon="info">
+    Navigate to the dashboard settings and view your installed version.
+  </Step>
+  <Step title="Download Update" icon="download">
+    <CodeGroup tabs="Docker,CLI">
+      ````bash
+      docker pull cusnir/cusnir-os:latest
+      ````
+
+      ````bash
+      cusnir-cli update --latest
+      ````
+    </CodeGroup>
+  </Step>
+  <Step title="Restart Service" icon="refresh-cw">
+    Restart the CUSNIR OS container or service to apply changes.
+
+    ````bash
+    docker restart cusnir-os-container
+    ````
+  </Step>
+  <Step title="Verify Update" icon="check-circle">
+    Confirm the new version in the settings panel.
+  </Step>
+</Steps>
+
+## Release History
+
+<Update label="2024-10-20" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added cognitive decision engine for automated governance workflows
+- Introduced real-time collaboration mode for multi-user decision sessions
+- New dashboard analytics with predictive insights
+
+## Improvements
+
+- Enhanced UI responsiveness, reducing load times by `>40%`
+- Optimized decision-making algorithms for complex scenarios
+- Improved demo mode with extended feature access
+
+## Bug Fixes
+
+- Fixed authentication token refresh issues
+- Resolved governance rule validation errors
+
+</Update>
+
+<Update label="2024-09-25" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Governance policy builder with drag-and-drop interface
+- Integration with external APIs for decision data import
+- Export decisions as PDF or JSON reports
+
+## Bug Fixes
+
+- Corrected demo mode limitations on core features
+- Fixed intermittent dashboard crashes during high load
+- Patched security vulnerability in session management
+
+## Improvements
+
+- Streamlined onboarding flow for new users
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core cognitive operating system with decision-making platform
+- Interactive UI explorable without authentication (demo mode)
+- Basic governance tools and workflow automation
+
+## Breaking Changes
+
+- Initial setup requires Docker `>20.10` for containerization
+
+</Update>
+
+## Upcoming Changes
+
+<Expandable title="Planned for v1.3.0" default-open="false">
+
+CUSNIR OS continues to evolve with these upcoming enhancements:
+
+- AI-powered decision recommendations
+- Advanced role-based access controls
+- Mobile-responsive interface
+
+<Callout kind="tip">
+  Provide feedback on these features via the dashboard feedback form.
+</Callout>
+
+</Expandable>
+
+<Columns cols={3}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started with CUSNIR OS in minutes.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your governance workflows.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize your instance.
+  </Card>
+</Columns>
