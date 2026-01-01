@@ -97,6 +97,23 @@
                 ]
               },
               {
+                "group": "02 Identity Engine",
+                "icon": "folder",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "PURPOSE",
+                    "path": "architecture/02_IDENTITY_ENGINE/PURPOSE",
+                    "icon": "file-text"
+                  },
+                  {
+                    "title": "ORDER.READ",
+                    "path": "architecture/02_IDENTITY_ENGINE/ORDER.READ",
+                    "icon": "file-text"
+                  }
+                ]
+              },
+              {
                 "group": "02 Memory OS",
                 "icon": "folder",
                 "expandable": false,
@@ -143,6 +160,23 @@
                 ]
               },
               {
+                "group": "04 Semiotics Brand",
+                "icon": "folder",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "PURPOSE",
+                    "path": "architecture/04_SEMIOTICS_BRAND/PURPOSE",
+                    "icon": "file-text"
+                  },
+                  {
+                    "title": "ORDER.READ",
+                    "path": "architecture/04_SEMIOTICS_BRAND/ORDER.READ",
+                    "icon": "file-text"
+                  }
+                ]
+              },
+              {
                 "group": "05 Value Stack",
                 "icon": "folder",
                 "expandable": false,
@@ -155,6 +189,40 @@
                 ]
               },
               {
+                "group": "06 Growth Funnels",
+                "icon": "folder",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "PURPOSE",
+                    "path": "architecture/06_GROWTH_FUNNELS/PURPOSE",
+                    "icon": "file-text"
+                  },
+                  {
+                    "title": "ORDER.READ",
+                    "path": "architecture/06_GROWTH_FUNNELS/ORDER.READ",
+                    "icon": "file-text"
+                  }
+                ]
+              },
+              {
+                "group": "07 Prompt Engineering",
+                "icon": "folder",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "PURPOSE",
+                    "path": "architecture/07_PROMPT_ENGINEERING/PURPOSE",
+                    "icon": "file-text"
+                  },
+                  {
+                    "title": "ORDER.READ",
+                    "path": "architecture/07_PROMPT_ENGINEERING/ORDER.READ",
+                    "icon": "file-text"
+                  }
+                ]
+              },
+              {
                 "group": "08 Operations",
                 "icon": "folder",
                 "expandable": false,
@@ -162,6 +230,23 @@
                   {
                     "title": "DELIVERY.CHAT",
                     "path": "architecture/08_OPERATIONS/DELIVERY.CHAT",
+                    "icon": "file-text"
+                  }
+                ]
+              },
+              {
+                "group": "09 Quarantine",
+                "icon": "folder",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "PURPOSE",
+                    "path": "architecture/09_QUARANTINE/PURPOSE",
+                    "icon": "file-text"
+                  },
+                  {
+                    "title": "ORDER.READ",
+                    "path": "architecture/09_QUARANTINE/ORDER.READ",
                     "icon": "file-text"
                   }
                 ]
